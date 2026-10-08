@@ -2,9 +2,12 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 
 app = Flask(__name__)
 
-@app.route('/googlec8b4515c97ef9409.html')
+@app.route("/googlec8b4515c97ef9409.html")
 def google_verification():
-    return send_from_directory('.', 'googlec8b4515c97ef9409.html')
+    return send_from_directory(
+        app.root_path,
+        "googlec8b4515c97ef9409.html"
+    )
 
 # ==========================================================
 # NEA DOMESTIC TARIFF
